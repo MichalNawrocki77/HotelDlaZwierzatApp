@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".AccountFragment">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="316dp"
+        android:layout_height="189dp"
+        android:src="@drawable/pies"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pawsome to meet you!"
+        android:textStyle="bold"
+        android:fontFamily="@font/bad_script"
+        android:textSize="30sp"
+        android:textColor="@color/coffee"
+        android:layout_gravity="center"
+        android:padding="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_description"
+        android:textColor="@color/beige"
+        android:textSize="20sp"
+        android:fontFamily="@font/capriola"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:padding="5dp"/>
+
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Log in"
+        android:background="@drawable/btn"
+        android:textColor="@color/beige"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/button_signup"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Sign up"
+        android:background="@drawable/btn"
+        android:textColor="@color/beige"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>

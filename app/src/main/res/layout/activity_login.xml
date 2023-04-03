@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/header_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:text="Login"
+        android:textColor="@color/coffee"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/UserName"
+        android:layout_width="211dp"
+        android:layout_height="51dp"
+        android:background="@drawable/background_text"
+        android:drawablePadding="8dp"
+        android:ems="10"
+        android:hint="User name"
+        android:inputType="textPersonName"
+        android:paddingLeft="15dp"
+        android:text="User name"
+        android:textColor="@color/grey"
+        android:textColorHint="@color/grey"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/header_login"
+        app:layout_constraintVertical_bias="0.18">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/UserPassword"
+        android:layout_width="211dp"
+        android:layout_height="51dp"
+        android:background="@drawable/background_text"
+        android:drawablePadding="8dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingLeft="15dp"
+        android:text="Password"
+        android:textColor="@color/grey"
+        android:textColorHint="@color/grey"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/UserName"
+        app:layout_constraintVertical_bias="0.154">
+
+    </EditText>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Login"
+        android:textStyle="bold"
+        android:background="@drawable/btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/UserPassword"
+        app:layout_constraintVertical_bias="0.214" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
