@@ -7,12 +7,24 @@
     android:background="@color/white"
     tools:context=".RegisterActivity">
 
+    <ImageView
+        android:layout_width="319dp"
+        android:layout_height="204dp"
+        android:src="@drawable/login_signup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+    </ImageView>
+
     <TextView
         android:id="@+id/register_txt"
-        android:layout_width="130dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="130dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
         android:text="Sign up"
+        android:fontFamily="@font/bad_script"
         android:textAlignment="center"
         android:textColor="@color/coffee"
         android:textSize="30sp"
@@ -48,7 +60,7 @@
         android:id="@+id/UserPassword"
         android:layout_width="211dp"
         android:layout_height="51dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="25dp"
         android:background="@drawable/background_text"
         android:drawablePadding="8dp"
         android:ems="10"
@@ -71,7 +83,7 @@
         android:id="@+id/UserPasswordSecond"
         android:layout_width="211dp"
         android:layout_height="51dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="30dp"
         android:ems="10"
         android:inputType="textPassword"
         android:textSize="16sp"
@@ -94,12 +106,13 @@
         android:id="@+id/button"
         android:layout_width="150dp"
         android:layout_height="60dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:text="Sign up"
         android:textStyle="bold"
         android:textSize="16sp"
-        android:textColor="@color/black"
+        android:textColor="@color/beige"
         android:background="@drawable/btn"
+        android:fontFamily="@font/capriola"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/UserPasswordSecond">

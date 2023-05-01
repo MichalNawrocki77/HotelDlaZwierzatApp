@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_home -> fragment = HomeFragment()
                 R.id.nav_calendar -> fragment = CalendarFragment()
                 R.id.nav_account -> fragment = AccountFragment()
+                R.id.nav_preview -> fragment = PreviewFragment()
             }
 
 

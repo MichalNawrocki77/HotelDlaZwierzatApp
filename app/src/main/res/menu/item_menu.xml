@@ -12,4 +12,8 @@
         android:title="Account"
         android:icon="@drawable/account_ic">
     </item>
+    <item android:id="@+id/nav_preview"
+        android:title="Preview"
+        android:icon="@drawable/preview_ic">
+    </item>
 </menu>

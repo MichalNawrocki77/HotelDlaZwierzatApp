@@ -7,12 +7,24 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
+    <ImageView
+        android:layout_width="319dp"
+        android:layout_height="204dp"
+        android:src="@drawable/login_signup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+    </ImageView>
+
     <TextView
         android:id="@+id/header_login"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="200dp"
         android:text="Login"
+        android:fontFamily="@font/bad_script"
         android:textColor="@color/coffee"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -50,6 +62,7 @@
         android:id="@+id/UserPassword"
         android:layout_width="211dp"
         android:layout_height="51dp"
+        android:layout_marginBottom="250dp"
         android:background="@drawable/background_text"
         android:drawablePadding="8dp"
         android:ems="10"
@@ -63,8 +76,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/UserName"
-        app:layout_constraintVertical_bias="0.154">
+        app:layout_constraintTop_toTopOf="@id/UserName">
 
     </EditText>
 
@@ -73,7 +85,9 @@
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:text="Login"
+        android:fontFamily="@font/capriola"
         android:textStyle="bold"
+        android:textColor="@color/beige"
         android:background="@drawable/btn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

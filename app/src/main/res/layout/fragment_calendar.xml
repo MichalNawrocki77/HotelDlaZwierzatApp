@@ -5,13 +5,13 @@
     android:layout_height="match_parent"
     tools:context=".CalendarFragment">
 
-    <TextView
+    <CalendarView
+        android:id="@+id/calendarView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello"
-        android:gravity="center"
-        android:textSize="30dp"
-        android:textColor="@color/coffee"
-        android:textStyle="bold"/>
+        android:layout_height="322dp"
+        android:background="@color/white"
+        android:dateTextAppearance="@style/CalenderViewDateCustomText"
+        android:theme="@style/CalendarViewCustom"
+        android:weekDayTextAppearance="@style/CalenderViewWeekCustomText"/>
 
 </FrameLayout>
