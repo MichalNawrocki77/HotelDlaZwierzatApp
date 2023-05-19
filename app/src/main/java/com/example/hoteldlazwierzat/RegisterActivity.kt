@@ -1,24 +1,21 @@
 package com.example.hoteldlazwierzat
 
-import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
-import android.widget.Toast
 import androidx.activity.viewModels
 import com.example.hoteldlazwierzat.ViewModels.RegisterViewModel
 import com.example.hoteldlazwierzat.data.Entities.Client
-import com.example.hoteldlazwierzat.data.DAO.ClientDAO
-import com.example.hoteldlazwierzat.data.Repositories.ClientRepo
 import com.example.hoteldlazwierzat.databinding.ActivityRegisterBinding
 
 class RegisterActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegisterBinding
     private var passwordErrorMessages = mutableListOf<String>()
     private var usernameErrorMessages = mutableListOf<String>()
+
     //ViewModel
     private val registerVM by viewModels<RegisterViewModel>()
 
@@ -28,7 +25,6 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
 
         binding.UserName.addTextChangedListener(object: TextWatcher{
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int){}
@@ -99,7 +95,6 @@ class RegisterActivity : AppCompatActivity() {
         //The more you know
         binding.signUpButton.isClickable = false
     }
-    //Password and login validation
     private fun CheckIfPasswordsAreIdentical() : Boolean{
         //I did not initialized tempErrorMessage like in every other "CheckPassword" function
         // because it's initialized as a class variable (for visibility reason, as it's also used in TextChangedListeners)
@@ -180,9 +175,4 @@ class RegisterActivity : AppCompatActivity() {
 
         binding.signUpButton.isClickable = binding.ErrorMessage.text.isBlank()
     }
-
-    //Registering user
-    private fun RegisterUser(){
-    }
-
 }
