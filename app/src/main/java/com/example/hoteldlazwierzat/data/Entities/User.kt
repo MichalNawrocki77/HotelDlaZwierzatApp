@@ -7,7 +7,5 @@ abstract class User(var username:String,
                     var surname:String="DEFAULT",
                     var email:String="DEFAULT",
                     var password:String){
-    abstract fun LogOut()
-    //overriding of toString is for database testing purposes only!
-    override fun toString() = "name: $name; surname: $surname; email: $email; password: $password"
+    override fun toString() = "name: $name; username: $username; email: $email;surname: $surname;"
 }

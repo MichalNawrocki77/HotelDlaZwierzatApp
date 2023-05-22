@@ -18,7 +18,5 @@ class Client(@PrimaryKey(autoGenerate = true)val id:Int = 0,
              var province:String = "DEFAULT",
              ) : User(username,name,surname,email,password) {
 
-    override fun LogOut() {
-        TODO("Not yet implemented")
-    }
+    override fun toString(): String = "id: $id;" + super.toString()
 }
