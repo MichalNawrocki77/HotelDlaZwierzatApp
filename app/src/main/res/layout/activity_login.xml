@@ -46,7 +46,6 @@
         android:hint="User name"
         android:inputType="textPersonName"
         android:paddingLeft="15dp"
-        android:text="User name"
         android:textColor="@color/grey"
         android:textColorHint="@color/grey"
         android:textSize="16sp"
@@ -69,7 +68,6 @@
         android:hint="Password"
         android:inputType="textPassword"
         android:paddingLeft="15dp"
-        android:text="Password"
         android:textColor="@color/grey"
         android:textColorHint="@color/grey"
         android:textSize="16sp"
@@ -101,8 +99,22 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_login">
+        app:layout_constraintTop_toBottomOf="@+id/btn_login"
+        app:layout_constraintVertical_bias="0.182">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/ErrorMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#F44336"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loggedClient">
 
     </TextView>
 

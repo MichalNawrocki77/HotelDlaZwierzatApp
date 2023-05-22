@@ -78,11 +78,11 @@ class RegisterActivity : AppCompatActivity() {
             }
         })
         binding.signUpButton.setOnClickListener() {
+            val newClient = Client(
+                username = binding.UserName.text.toString(),
+                password = binding.UserPassword1.text.toString()
+            )
             CoroutineScope(Dispatchers.IO).launch {
-                val newClient = Client(
-                    username = binding.UserName.text.toString(),
-                    password = binding.UserPassword1.text.toString()
-                )
                 if(CheckIfClientDoesNotExists(newClient)) {
                     RegisterUser(newClient)
                     LoginUser(newClient)
@@ -90,7 +90,6 @@ class RegisterActivity : AppCompatActivity() {
                         binding.UserName.text.clear()
                         binding.UserPassword1.text.clear()
                         binding.UserPassword2.text.clear()
-                        //val intent = Intent(applicationContext, LoginActivity::class.java)
                     }
                 } else{
                     withContext(Dispatchers.Main) {

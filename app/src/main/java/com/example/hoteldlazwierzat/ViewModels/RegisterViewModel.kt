@@ -31,29 +31,11 @@ class RegisterViewModel(app: Application) : AndroidViewModel(app) {
     suspend fun SuspendedInsertClient(client: Client){
         repo.insert(client)
     }
-    fun UpdateClient(client: Client){
-        CoroutineScope(Dispatchers.IO).launch {
-            repo.update(client)
-        }
-    }
-    fun DeleteClient(client: Client){
-        CoroutineScope(Dispatchers.IO).launch {
-            repo.delete(client)
-        }
-    }
 
     fun GetClientByUserName(username:String) : Client {
         return repo.findClientByUserName(username)
     }
     fun getAllClientUsernames() : List<String>{
         return repo.getAllClientUsernames()
-    }
-
-
-    fun RegisterAndLoginClient(client:Client){
-        InsertClient(client)
-        CoroutineScope(viewModelScope.coroutineContext).launch {
-            //loggedClient = GetClientByUserName(client.username).collect {}
-        }
     }
 }
