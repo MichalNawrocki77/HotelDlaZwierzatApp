@@ -2,8 +2,6 @@ package com.example.hoteldlazwierzat.data.DAO
 
 import androidx.room.*
 import com.example.hoteldlazwierzat.data.Entities.Client
-import com.example.hoteldlazwierzat.data.Entities.User
-import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface ClientDAO {
