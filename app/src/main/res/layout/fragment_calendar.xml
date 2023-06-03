@@ -7,11 +7,25 @@
 
     <CalendarView
         android:id="@+id/calendarView"
-        android:layout_width="match_parent"
-        android:layout_height="322dp"
-        android:background="@color/white"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="100dp"
+        android:background="@color/beige"
         android:dateTextAppearance="@style/CalenderViewDateCustomText"
         android:theme="@style/CalendarViewCustom"
-        android:weekDayTextAppearance="@style/CalenderViewWeekCustomText"/>
+        android:weekDayTextAppearance="@style/CalenderViewWeekCustomText" />
+
+    <Button
+        android:id="@+id/btn_booking"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="130dp"
+        android:layout_gravity="center"
+        android:background="@drawable/btn"
+        android:text="Booking"
+        android:textColor="@color/white"
+        android:fontFamily="@font/bad_script"
+        android:textSize="15sp" />
 
 </FrameLayout>
