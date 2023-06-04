@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
 import com.example.hoteldlazwierzat.ViewModels.BookingViewModel
+import com.example.hoteldlazwierzat.ViewModels.LoggedClient
 import com.example.hoteldlazwierzat.data.Entities.Reservation
 import com.example.hoteldlazwierzat.databinding.ActivityBookingBinding
 import com.google.android.material.textfield.TextInputEditText
@@ -45,7 +46,7 @@ class BookingActivity : AppCompatActivity() {
                !binding.email.text.isNullOrBlank() &&
                !binding.date.text.isNullOrBlank()) {
                 val reservation = Reservation(
-                    clientId = bookingVM.loggedClient?.id,
+                    clientId = LoggedClient.client?.id,
                     clientName = binding.name.text.toString(),
                     clientPhoneNumber = binding.phone.text.toString(),
                     clientEmail = binding.email.text.toString(),

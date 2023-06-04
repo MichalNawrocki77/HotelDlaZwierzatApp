@@ -17,17 +17,8 @@ import kotlinx.coroutines.launch
 
 class RegisterViewModel(app: Application) : AndroidViewModel(app) {
     private val repo = ClientRepo(app.applicationContext)
-    lateinit var loggedClient : Client
 
-    /**
-     * In case you want to insert Client outside of a coroutine, this function launches it's own corotuine
-     * to insert a Client object
-     */
-    fun InsertClient(client: Client){
-        CoroutineScope(Dispatchers.IO).launch {
-            repo.insert(client)
-        }
-    }
+
     suspend fun SuspendedInsertClient(client: Client){
         repo.insert(client)
     }

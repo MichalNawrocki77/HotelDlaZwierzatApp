@@ -8,8 +8,6 @@ import com.example.hoteldlazwierzat.data.Repositories.ClientRepo
 
 class LoginViewModel(app: Application) : AndroidViewModel(app) {
     private val repo = ClientRepo(app.applicationContext)
-    var loggedClient : Client? = null
-
     fun GetClientByUserName(username:String) : Client? {
         return repo.findClientByUserName(username)
     }

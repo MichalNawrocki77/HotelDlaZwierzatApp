@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PreviewActivity">
+
+    <TextView
+        android:id="@+id/yourBooking_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top"
+        android:fontFamily="@font/bad_script"
+        android:text="Your booking"
+        android:textColor="@color/coffee"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:paddingVertical="5dp" />
+
+    <LinearLayout
+        android:id="@+id/reservationList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,21 +1,17 @@
 package com.example.hoteldlazwierzat
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.widget.Toast
 import androidx.activity.viewModels
 import com.example.hoteldlazwierzat.ViewModels.RegisterViewModel
 import com.example.hoteldlazwierzat.data.Entities.Client
-import com.example.hoteldlazwierzat.data.Repositories.ClientRepo
+import com.example.hoteldlazwierzat.ViewModels.LoggedClient
 import com.example.hoteldlazwierzat.databinding.ActivityRegisterBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
@@ -33,6 +29,12 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        if(LoggedClient.isLoggedIn()) {
+            binding.loggedCLient.text = LoggedClient.client?.toString()
+        }else{
+            binding.loggedCLient.text = "no user found"
+        }
 
         binding.UserName.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
@@ -90,6 +92,7 @@ class RegisterActivity : AppCompatActivity() {
                         binding.UserName.text.clear()
                         binding.UserPassword1.text.clear()
                         binding.UserPassword2.text.clear()
+                        binding.loggedCLient.text = LoggedClient.client?.toString()
                     }
                 } else{
                     withContext(Dispatchers.Main) {
@@ -229,10 +232,7 @@ class RegisterActivity : AppCompatActivity() {
             }
         }
     }
-    private suspend fun LoginUser(client: Client){
-        registerVM.loggedClient = registerVM.GetClientByUserName(client.username)
-        withContext(Dispatchers.Main) {
-            binding.loggedCLient.text = registerVM.loggedClient.toString()
-        }
+    private fun LoginUser(client: Client){
+        LoggedClient.client = registerVM.GetClientByUserName(client.username)
     }
 }

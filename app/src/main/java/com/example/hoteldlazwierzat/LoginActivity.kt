@@ -7,7 +7,7 @@ import android.text.TextWatcher
 import android.widget.Toast
 import androidx.activity.viewModels
 import com.example.hoteldlazwierzat.ViewModels.LoginViewModel
-import com.example.hoteldlazwierzat.data.Entities.Client
+import com.example.hoteldlazwierzat.ViewModels.LoggedClient
 import com.example.hoteldlazwierzat.databinding.ActivityLoginBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -47,18 +47,18 @@ class LoginActivity : AppCompatActivity() {
                 binding.btnLogin.isClickable = CheckUsernameForLength() && binding.UserPassword.text.isNotBlank()
             }
         })
-        binding.btnLogin.setOnClickListener(){
+        binding.btnLogin.setOnClickListener {
             CoroutineScope(Dispatchers.IO).launch {
                 if (CheckIfUserExists()) {
                     if (CheckIfPasswordsMatch()) {
-                        loginVM.loggedClient = loginVM.GetClientByUserName(binding.UserName.text.toString())
+                        LoggedClient.client = loginVM.GetClientByUserName(binding.UserName.text.toString())
                         withContext(Dispatchers.Main) {
                             Toast.makeText(
                                 applicationContext,
-                                "successfully logged into ${loginVM.loggedClient!!.username}",
+                                "successfully logged into ${LoggedClient.client!!.username}",
                                 Toast.LENGTH_SHORT
                             ).show()
-                            binding.loggedClient.text = loginVM.loggedClient.toString()
+                            binding.loggedClient.text = LoggedClient.client.toString()
                         }
                     }
                 }
