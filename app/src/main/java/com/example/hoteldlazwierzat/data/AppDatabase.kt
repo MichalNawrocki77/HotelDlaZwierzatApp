@@ -1,15 +1,21 @@
 package com.example.hoteldlazwierzat.data
 
 import android.content.Context
-import androidx.room.Database
-import androidx.room.Room
-import androidx.room.RoomDatabase
+import androidx.room.*
 import com.example.hoteldlazwierzat.data.DAO.ClientDAO
+import com.example.hoteldlazwierzat.data.DAO.ReservationDAO
 import com.example.hoteldlazwierzat.data.Entities.Client
+import com.example.hoteldlazwierzat.data.Entities.LocalDateConverter
+import com.example.hoteldlazwierzat.data.Entities.Reservation
 
-@Database(entities = [Client::class], version = 1)
+@Database(
+    entities = [Client::class,Reservation::class],
+    version = 1,
+)
+@TypeConverters(LocalDateConverter::class)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun clientDAO() : ClientDAO
+    abstract fun reservationDAO() : ReservationDAO
 
     companion object{
         private var Instance : AppDatabase? = null

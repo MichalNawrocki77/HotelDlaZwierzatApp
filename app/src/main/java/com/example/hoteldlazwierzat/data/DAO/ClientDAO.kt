@@ -14,7 +14,6 @@ interface ClientDAO {
     @Update
     suspend fun update(client: Client)
 
-
     @Query("SELECT * FROM clients_table WHERE username=:username")
     fun findClientByUserName(username: String) : Client
 
