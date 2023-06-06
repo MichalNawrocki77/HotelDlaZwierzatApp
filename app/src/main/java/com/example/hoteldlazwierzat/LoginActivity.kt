@@ -58,7 +58,6 @@ class LoginActivity : AppCompatActivity() {
                                 "successfully logged into ${LoggedClient.client!!.username}",
                                 Toast.LENGTH_SHORT
                             ).show()
-                            binding.loggedClient.text = LoggedClient.client.toString()
                         }
                     }
                 }

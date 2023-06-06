@@ -30,12 +30,6 @@ class RegisterActivity : AppCompatActivity() {
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        if(LoggedClient.isLoggedIn()) {
-            binding.loggedCLient.text = LoggedClient.client?.toString()
-        }else{
-            binding.loggedCLient.text = "no user found"
-        }
-
         binding.UserName.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
@@ -92,7 +86,6 @@ class RegisterActivity : AppCompatActivity() {
                         binding.UserName.text.clear()
                         binding.UserPassword1.text.clear()
                         binding.UserPassword2.text.clear()
-                        binding.loggedCLient.text = LoggedClient.client?.toString()
                     }
                 } else{
                     withContext(Dispatchers.Main) {
