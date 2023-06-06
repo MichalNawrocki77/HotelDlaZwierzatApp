@@ -57,7 +57,7 @@
     </EditText>
 
     <EditText
-        android:id="@+id/UserPassword"
+        android:id="@+id/UserPassword1"
         android:layout_width="211dp"
         android:layout_height="51dp"
         android:layout_marginTop="25dp"
@@ -67,7 +67,6 @@
         android:hint="Password"
         android:inputType="textPassword"
         android:paddingLeft="15dp"
-        android:text="Password"
         android:textColor="@color/grey"
         android:textColorHint="@color/grey"
         android:textSize="16sp"
@@ -80,30 +79,29 @@
     </EditText>
 
     <EditText
-        android:id="@+id/UserPasswordSecond"
+        android:id="@+id/UserPassword2"
         android:layout_width="211dp"
         android:layout_height="51dp"
         android:layout_marginTop="30dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:textSize="16sp"
-        android:text="Password"
-        android:hint="Password"
-        android:textColorHint="@color/grey"
-        android:textColor="@color/grey"
-        android:paddingLeft="15dp"
         android:background="@drawable/background_text"
         android:drawablePadding="8dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingLeft="15dp"
+        android:textColor="@color/grey"
+        android:textColorHint="@color/grey"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/UserPassword"
+        app:layout_constraintTop_toTopOf="@id/UserPassword1"
         app:layout_constraintVertical_bias="0.141">
 
     </EditText>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/signUpButton"
         android:layout_width="150dp"
         android:layout_height="60dp"
         android:layout_marginTop="30dp"
@@ -115,7 +113,20 @@
         android:fontFamily="@font/capriola"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/UserPasswordSecond">
+        app:layout_constraintTop_toBottomOf="@id/UserPassword2">
 
     </Button>
+
+    <TextView
+        android:id="@+id/ErrorMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#F44336"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUpButton">
+
+    </TextView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

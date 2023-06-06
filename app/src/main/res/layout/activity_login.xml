@@ -23,15 +23,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
+        android:fontFamily="@font/capriola"
         android:text="Login"
-        android:fontFamily="@font/bad_script"
+        android:textAlignment="center"
         android:textColor="@color/coffee"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:textAlignment="center"
-        app:layout_constraintTop_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
     </TextView>
@@ -46,7 +46,6 @@
         android:hint="User name"
         android:inputType="textPersonName"
         android:paddingLeft="15dp"
-        android:text="User name"
         android:textColor="@color/grey"
         android:textColorHint="@color/grey"
         android:textSize="16sp"
@@ -69,7 +68,6 @@
         android:hint="Password"
         android:inputType="textPassword"
         android:paddingLeft="15dp"
-        android:text="Password"
         android:textColor="@color/grey"
         android:textColorHint="@color/grey"
         android:textSize="16sp"
@@ -94,6 +92,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/UserPassword"
         app:layout_constraintVertical_bias="0.214" />
+
+    <TextView
+        android:id="@+id/ErrorMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#F44336"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login">
+
+    </TextView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
